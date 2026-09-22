@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Janine Cheong | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--bg-soft:#fff6f9;--card:#fff;--pink-100:#ffe3ec;--pink-300:#f2a9c1;--pink-500:#dd5c8b;--pink-700:#a83358;--text:#2c232a;--text-soft:#7a6b73;--border:#f4d9e4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1216;--bg-soft:#241419;--card:#2a181f;--pink-100:#3a1f2a;--pink-300:#7a4a5f;--pink-500:#ef8fb2;--pink-700:#ffa9c6;--text:#f5e8ee;--text-soft:#c9b0bb;--border:#3d2530}}
+:root[data-theme="dark"]{--bg:#1c1216;--bg-soft:#241419;--card:#2a181f;--pink-100:#3a1f2a;--pink-300:#7a4a5f;--pink-500:#ef8fb2;--pink-700:#ffa9c6;--text:#f5e8ee;--text-soft:#c9b0bb;--border:#3d2530}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0))}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,sans-serif;line-height:1.6;font-size:16px}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:700;color:var(--text)}
+a{color:var(--pink-700);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible{outline:3px solid var(--pink-500);outline-offset:3px;border-radius:6px}
+.wrap{max-width:920px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:env(safe-area-inset-top,0);z-index:10;background:rgba(255,255,255,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+:root[data-theme="dark"] nav{background:rgba(28,18,22,.88)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) nav{background:rgba(28,18,22,.88)}}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;flex-wrap:wrap;gap:10px}
+.logo{font-family:"Playfair Display",serif;font-weight:700;font-size:1.15rem;color:var(--pink-700)}
+.navlinks{display:flex;gap:22px;flex-wrap:wrap}.navlinks a{font-size:.9rem;font-weight:500;color:var(--text-soft)}.navlinks a:hover{color:var(--pink-700)}
+.hero{background:linear-gradient(180deg,var(--pink-100),var(--bg) 75%);padding:64px 0 48px;text-align:center}.hero h1{font-size:2.6rem;margin-bottom:6px}.hero .role{color:var(--pink-700);font-weight:600;margin-bottom:14px;font-size:1.05rem}.hero p.blurb{max-width:600px;margin:0 auto 22px;color:var(--text-soft)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}.chip{background:var(--card);border:1px solid var(--border);border-radius:999px;padding:7px 16px;font-size:.85rem;color:var(--text-soft)}
+section{padding:54px 0}.section-title{font-size:1.6rem;margin-bottom:6px}.section-sub{color:var(--text-soft);font-size:.92rem;margin-bottom:28px}.divider{width:40px;height:3px;background:var(--pink-500);border-radius:2px;margin-bottom:16px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px 24px;margin-bottom:16px}.card h3{font-size:1.08rem;margin-bottom:2px}.card .meta{color:var(--pink-700);font-size:.85rem;font-weight:600;margin-bottom:2px}.card .dates{color:var(--text-soft);font-size:.82rem;margin-bottom:10px}.card ul{padding-left:18px;color:var(--text-soft);font-size:.92rem}.card li{margin-bottom:5px}
+.module-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:30px;row-gap:6px}.module-list li{margin-bottom:0}
+.badge{display:inline-block;background:var(--pink-100);color:var(--pink-700);font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:999px;margin-bottom:10px;letter-spacing:.02em}.badge.outline{background:transparent;border:1px solid var(--pink-300)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.skillgroup{margin-bottom:20px}.skillgroup h3{font-size:.95rem;color:var(--pink-700);margin-bottom:10px}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{background:var(--bg-soft);border:1px solid var(--border);border-radius:8px;padding:6px 12px;font-size:.83rem;color:var(--text)}
+.leadlist{display:grid;gap:10px}.leaditem{display:flex;justify-content:space-between;gap:14px;border-bottom:1px solid var(--border);padding-bottom:10px;font-size:.9rem;flex-wrap:wrap}.leaditem .role{font-weight:600}.leaditem .org{color:var(--text-soft)}.leaditem .when{color:var(--text-soft);font-size:.8rem;white-space:nowrap}
+footer{background:var(--pink-100);padding:44px 0;text-align:center;margin-top:30px}footer h2{margin-bottom:8px}footer p{color:var(--text-soft);margin-bottom:18px;font-size:.92rem}footer .chips{margin-bottom:8px}.small{font-size:.78rem;color:var(--text-soft);margin-top:20px}
+@media (max-width:640px){.grid2,.module-list{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><div class="logo">Janine Cheong</div><div class="navlinks"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#leadership">Leadership</a><a href="#other-achievements">Achievements</a><a href="#contact">Contact</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1>Janine Cheong</h1>
+  <div class="role">BSc Finance: Data Science, University of Exeter</div>
+  <p class="blurb">I am a final year Finance and Data Science student at the University of Exeter, graduating in July 2027. I enjoy using financial analysis and data to answer practical questions, and I have gained experience at American Express and in finance and operations roles in Malaysia.</p>
+  <div class="chips">
+    <span class="chip">📍 Exeter, UK | Open to relocation</span>
+    <a class="chip" href="mailto:janinecheong51@gmail.com" aria-label="Email Janine Cheong">✉️ janinecheong51@gmail.com</a>
+    <a class="chip" href="tel:+447979060702" aria-label="Call Janine Cheong">📞 +44 7979 060702</a>
+    <a class="chip" href="https://www.linkedin.com/in/tze-ning-janine-cheong" target="_blank" rel="noopener noreferrer" aria-label="Janine Cheong on LinkedIn">💼 LinkedIn</a>
+  </div>
+</div></header>
+
+<section id="about"><div class="wrap">
+  <div class="divider"></div><h2 class="section-title">Education</h2><p class="section-sub">Second Class Honours, Upper Division (2:1) to date</p>
+  <div class="card">
+    <h3>BSc Finance: Data Science</h3><div class="meta">University of Exeter</div><div class="dates">September 2024 to July 2027 (expected)</div><p class="dates">Full module list</p>
+    <ul class="module-list">
+      <li>Economic Principles</li><li>Finance and Investment</li><li>Statistical Methods</li><li>Financial Accounting</li><li>Econometrics</li><li>Data Science in Economics</li><li>Business and Management</li><li>Corporate Finance</li><li>Financial Reporting and Analysis</li><li>FinTech</li><li>Digital Technologies</li><li>Business Analytics</li><li>Ethics and Corporate Governance</li><li>Investment practice</li><li>Advanced Corporate Finance</li><li>Financial Modelling</li><li>Sustainable and Responsible Finance</li><li>Machine Learning for Economics</li><li>Financial Institutions' Risk Management</li><li>Applied Finance Project</li><li>Media, Al and the Metaverse</li>
+    </ul>
+  </div>
+  <div class="card"><h3>A Levels | Mathematics, Psychology, Biology</h3><div class="meta">Taylor's University College, Selangor, Malaysia</div><div class="dates">August 2022 to November 2023</div></div>
+  <div class="card"><h3>IGCSEs | 5A*, 1A, 2B, 1C</h3><div class="meta">Kolej Tuanku Ja'afar, Negeri Sembilan, Malaysia</div><div class="dates">January 2021 to June 2022</div></div>
+</div></section>
+
+<section id="experience" style="background:var(--bg-soft)"><div class="wrap">
+  <div class="divider"></div><h2 class="section-title">Work Experience</h2><p class="section-sub">Internships and roles across finance, knowledge management and operations</p>
+  <div class="card"><h3>Project Analyst Intern | Global Learning &amp; Knowledge Management</h3><div class="meta">American Express | Kuala Lumpur, Malaysia</div><div class="dates">June 2026 to August 2026</div><ul><li>Processed 71 knowledge management requests and coordinated the approvals needed for updates</li><li>Reviewed request complexity and routed about 480 suitable work items to the Japan team, helping to reduce the writer backlog</li><li>Worked with Senior Writers on change recommendations using feedback from teams in Kuala Lumpur and Japan</li><li>Researched refresher training practices and helped develop a writer competency framework</li><li>Redesigned the presentation deck for a department wide Learn &amp; Connect event</li></ul></div>
+  <div class="card"><h3>Administrative Assistant</h3><div class="meta">Hugo Tax &amp; Management Services LLP | Malacca, Malaysia</div><div class="dates">May 2024 to August 2024</div><ul><li>Processed and reconciled more than 100 client and finance documents each week to produce complete records for audit work</li><li>Built Excel summaries that made key financial information easier for stakeholders to review</li><li>Standardised document categorisation, reducing reconciliation time by 20%</li></ul></div>
+  <div class="card"><h3>Business Operations Assistant</h3><div class="meta">Eng Lian Quarry Sdn Bhd | Negeri Sembilan, Malaysia</div><div class="dates">April 2024 to May 2024</div><ul><li>Maintained and validated daily logistics data for cost monitoring and operational planning</li></ul></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <div class="divider"></div><h2 class="section-title">Analytical Projects</h2><p class="section-sub">Academic and applied finance work</p>
+  <div class="card"><span class="badge">Ongoing | Topic to be confirmed</span><h3>Applied Finance Project (BEF3010)</h3><div class="meta">Final Year Project | University of Exeter</div><div class="dates">September 2026 to June 2027</div><ul><li>Final year project focused on a practical finance question, with the topic to be confirmed</li><li>Will evaluate evidence and data using financial databases and analysis tools</li><li>Will present findings and recommendations to a professional audience</li></ul></div>
+  <div class="card"><span class="badge outline">Coursework</span><h3>Financial Analyst Report | Marks &amp; Spencer Group plc</h3><div class="meta">Financial Reporting &amp; Analysis module | University of Exeter</div><div class="dates">FY2024/25 vs FY2023/24</div><ul><li>Wrote an analyst report of about 2,000 words covering financial performance, position, cash flow and earnings quality</li><li>Findings: revenue up 6.0% to £13,816.8m; adjusted operating profit up 17.4% to £984.5m; statutory PBT down 23.9% to £511.8m on a £248.5m Ocado Retail impairment</li><li>Net assets rose to £2,951.4m; net funds strengthened to £437.8m; operating cash flow-to-net-income ratio rose to 4.50x</li><li>Evaluated accounting judgements against restated FY2023/24 comparatives</li></ul></div>
+  <div class="grid2">
+    <div class="card"><span class="badge outline">Simulation</span><h3>BCG GenAI Job Simulation</h3><div class="meta">Forage</div><div class="dates">August to September 2025</div><ul><li>Analysed 10-K filings in Python, cleaning and structuring data to identify performance and risk patterns</li><li>Built a prototype financial chatbot that explained filings in clear language</li></ul></div>
+    <div class="card"><span class="badge outline">Certificate</span><h3>Google Data Analytics Certificate</h3><div class="meta">Google</div><div class="dates">January to March 2026</div><ul><li>Completed practical training in data cleaning, spreadsheets, SQL and visualisation</li><li>Analysed three years of monthly sales data to identify seasonal demand patterns</li></ul></div>
+  </div>
+  <div class="card"><span class="badge outline">Job Simulation</span><h3>NSW Government Marketing &amp; Communications Simulation</h3><div class="meta">Forage</div><div class="dates">November 2025</div><ul><li>Completed tasks in communication planning, content design and brand aligned messaging</li></ul></div>
+</div></section>
+
+<section id="skills" style="background:var(--bg-soft)"><div class="wrap">
+  <div class="divider"></div><h2 class="section-title">Skills</h2>
+  <div class="skillgroup"><h3>Valuation &amp; Analysis</h3><div class="tags"><span class="tag">Financial Statement Analysis</span><span class="tag">DCF Fundamentals</span><span class="tag">Sensitivity Analysis</span><span class="tag">Performance &amp; Risk Drivers</span></div></div>
+  <div class="skillgroup"><h3>Tools</h3><div class="tags"><span class="tag">Excel (PivotTables, XLOOKUP/VLOOKUP)</span><span class="tag">Python (pandas, NumPy, matplotlib)</span><span class="tag">PowerPoint</span><span class="tag">SQL</span></div></div>
+  <div class="skillgroup"><h3>Professional Strengths</h3><div class="tags"><span class="tag">Attention to detail</span><span class="tag">Critical thinking</span><span class="tag">Teamwork</span><span class="tag">Adaptability</span><span class="tag">Clear communication</span></div></div>
+  <div class="skillgroup"><h3>Languages</h3><div class="tags"><span class="tag">English (fluent)</span><span class="tag">Mandarin (fluent)</span><span class="tag">Malay (native)</span></div></div>
+</div></section>
+
+<section id="leadership"><div class="wrap">
+  <div class="divider"></div><h2 class="section-title">Leadership &amp; Extracurriculars</h2>
+  <div class="leadlist">
+    <div class="leaditem"><span><span class="role">Publicity Secretary</span> | <span class="org">Badminton Society, Exeter</span></span><span class="when">February 2025 to June 2026</span></div>
+    <div class="leaditem"><span><span class="role">Volunteer</span> | <span class="org">Country Villas Resort Sports Carnival and Unit Showcase</span></span><span class="when">September 2019 to January 2024</span></div>
+    <div class="leaditem"><span><span class="role">VP, Marketing &amp; External Relations</span> | <span class="org">Community Service Initiative Society</span></span><span class="when">May 2022 to September 2023</span></div>
+    <div class="leaditem"><span><span class="role">Writer, Editor &amp; Designer</span> | <span class="org">Magazine Society</span></span><span class="when">September 2022 to October 2023</span></div>
+    <div class="leaditem"><span><span class="role">Team Lead (1st Place)</span> | <span class="org">Art &amp; Design Video Production Competition</span></span><span class="when">May to July 2020</span></div>
+  </div>
+</div></section>
+
+<section id="other-achievements" style="background:var(--bg-soft)"><div class="wrap">
+  <div class="divider"></div><h2 class="section-title">Other Achievements</h2><p class="section-sub">Creative and sporting achievements</p>
+  <div class="grid2">
+    <div class="card"><h3>Art &amp; Design</h3><ul><li>Subject Prize for Art &amp; Design, 2021</li><li>Displayed personal artwork at the Heart of Melaka Art Exhibition, 2019</li></ul></div>
+    <div class="card"><h3>Taekwondo</h3><ul><li>Represented Malaysia in the MGTF National Taekwondo Junior Open Championship, September 2018</li><li>First Runner Up in Individual Pattern Colour Belt Girls (States), May 2018</li><li>Third Place in Individual Sparring Colour Belt Girls (States), May 2018</li><li>First Runner Up in Individual Sparring Colour Belt Girls (States), November 2017</li></ul></div>
+  </div>
+</div></section>
+
+<footer id="contact"><div class="wrap">
+  <h2>Let's connect</h2><p>I am interested in 2027 graduate opportunities in finance, analysis and related roles. You are welcome to contact me by email or LinkedIn.</p>
+  <div class="chips"><a class="chip" href="mailto:janinecheong51@gmail.com">✉️ janinecheong51@gmail.com</a><a class="chip" href="tel:+447979060702">📞 +44 7979 060702</a><a class="chip" href="https://www.linkedin.com/in/tze-ning-janine-cheong" target="_blank" rel="noopener noreferrer" aria-label="Janine Cheong on LinkedIn">💼 LinkedIn</a></div>
+  <p class="small">© 2026 Janine Cheong</p>
+</div></footer>
+</body>
+</html>
